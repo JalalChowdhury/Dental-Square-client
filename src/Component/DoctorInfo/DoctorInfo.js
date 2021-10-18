@@ -7,7 +7,7 @@ const DoctorInfo = (props) => {
 
     return (
         <div className=" card_container col my-2 d-flex justify-content-center align-items-center">
-            <div className="card-design">
+            <div className="doctorCard-design">
 
 
                 <img className="doctor-image img-fluid" src={image} alt="" />

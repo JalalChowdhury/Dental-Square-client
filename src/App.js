@@ -1,11 +1,10 @@
-// import logo from './logo.svg';
+import { createContext, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import {
     BrowserRouter as Router,
     Switch,
     Route
-  } from "react-router-dom";
+} from "react-router-dom";
 
 import './App.css';
 
@@ -17,47 +16,68 @@ import Contact from './Pages/Contact/Contact';
 
 import Doctors from './Pages/Doctors/Doctors';
 import Home from './Pages/Home/Home';
+import Login from './Pages/Login/Login';
 import NotFound from './Pages/NotFound/NotFound';
+import Register from './Pages/Register/Register';
 import Services from './Pages/Services/Services';
+import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
+import Footer from "./Component/Footer/Footer";
+export const UserContext = createContext();
 
 function App() {
-    return (
-        <div className="">
-            <Router>
-            <Header></Header>
+    const [loggedInUser, setLoggedInUser] = useState();
 
-                <Switch>
-                    <Route exact path="/">
-                        <Home></Home>
-                    </Route>
-                    <Route path="/home">
-                        <Home></Home>
-                    </Route>
-                    <Route path="/services">
-                        <Services></Services>
-                    </Route>
-                    <Route path="/service/:serviceId">
-                        <ServiceCartDetail></ServiceCartDetail>
-                    </Route>
-                    <Route  path="/doctors">
-                        <Doctors></Doctors>
-                    </Route>
-                    <Route path="/appointment">
-                        <Appointment></Appointment>
-                    </Route>
-                    <Route path="/about">
-                        <About></About>
-                    </Route>
-                    <Route path="/contact">
-                        <Contact></Contact>
-                    </Route>
-                    
-                    <Route path="*">
-                        <NotFound></NotFound>
-                    </Route>
-                </Switch>
-            </Router>
-        </div>
+    return (
+        <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+
+            <div className="">
+                <Router>
+                    <Header></Header>
+
+                    <Switch>
+                        <Route exact path="/">
+                            <Home></Home>
+                        </Route>
+
+
+                        <Route path="/home">
+                            <Home></Home>
+                        </Route>
+                        <Route path="/services">
+                            <Services></Services>
+                        </Route>
+                        <PrivateRoute path="/service/:serviceId">
+                            <ServiceCartDetail></ServiceCartDetail>
+                        </PrivateRoute>
+                        <Route path="/doctors">
+                            <Doctors></Doctors>
+                        </Route>
+                        <Route path="/appointment">
+                            <Appointment></Appointment>
+                        </Route>
+                        <Route path="/about">
+                            <About></About>
+                        </Route>
+                        <Route path="/contact">
+                            <Contact></Contact>
+                        </Route>
+                        <Route path="/login">
+                            <Login></Login>
+                        </Route>
+
+                        <Route path="/register">
+                            <Register></Register>
+                        </Route>
+
+                        <Route path="*">
+                            <NotFound></NotFound>
+                        </Route>
+                    </Switch>
+                    <Footer></Footer>
+                </Router>
+            </div>
+        </UserContext.Provider>
+
     );
 }
 

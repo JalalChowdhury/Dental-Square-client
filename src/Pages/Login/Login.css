@@ -1,0 +1,36 @@
+.custom-input {
+    border: 1px solid lightgray;
+    transition: all 0.5s ease;
+}
+
+.custom-input:focus {
+    outline: none;
+    border: 1px solid #8B2323;
+}
+
+.text-brand {
+    color: #8B2323;
+}
+
+.bg-brand {
+    background-color: #8B2323;
+}
+
+.btn-brand {
+    color: rgb(255, 255, 255);
+    padding: 7px 25px;
+    border: none;
+    background-color: #8B2323;
+}
+
+.btn-brand-outline {
+    padding: 10px 25px;
+    color: #8B2323;
+    border: 1px solid #8B2323;
+    transition: all 0.5s ease;
+}
+
+.btn-brand-outline:hover {
+    color: white;
+    background-color: #8B2323;
+}

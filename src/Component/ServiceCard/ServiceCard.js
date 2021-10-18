@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap';
 
 const ServiceCard = (props) => {
 
-    const {id,title, image , charge } = props.service;
+    const { id, title, image, charge } = props.service;
 
     const serviceDetailURL = `/service/${id}`;
     return (
@@ -13,14 +13,14 @@ const ServiceCard = (props) => {
             <div className="card-design">
 
 
-                    <img className="card_img img-fluid" src={image} alt="" />
+                <img className="card_img img-fluid" src={image} alt="" />
 
                 <div className="card_body">
                     <h2 className="card_text">{title}</h2>
 
                     <h5 className="card_text" >$ {charge}</h5>
                     {/* <p>{description}</p> */}
-                    
+
                     <Link to={serviceDetailURL}>
                         <Button className="btn-design">Details</Button>
                     </Link>

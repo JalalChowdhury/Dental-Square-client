@@ -1,9 +1,18 @@
 import React from 'react';
+import FaqAbout from '../../Component/FaqAbout/FaqAbout';
+import WhyUs from '../../Component/WhyUs/WhyUs';
+import './About.css'
 
 const About = () => {
     return (
         <div>
-            <h1>This is About Pages </h1>
+            <div>
+
+                <FaqAbout></FaqAbout>
+            </div>
+            <div className="about-why py-5">
+                <WhyUs></WhyUs>
+            </div>
         </div>
     );
 };

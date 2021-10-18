@@ -1,0 +1,14 @@
+.send-btn{
+    background-color: #00bcd4;
+    width: 200px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+
+}
