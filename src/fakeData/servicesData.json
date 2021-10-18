@@ -1,0 +1,65 @@
+﻿[
+    {
+        "id": 1,
+        "title": "Cosmetic Dentistry ",
+        "image": "https://i.ibb.co/Qj9xmLM/Man-Open-mouth-Aesthetic-procedure-Dentist-Dental-clinic.jpg",
+        "charge": 129,
+        "description": "If your teeth are stained, discolored, worn, chipped, broken, misaligned, misshapen, or have gaps between them, modern cosmetic dentistry can give you a better smile. A “smile makeover” improves the appearance of your smile through one or more cosmetic dentistry procedures. Cosmetic dentists work with you to develop a treatment plan. Below you’ll find some information that can help you learn more about the various types of cosmetic dental procedures available."
+    },
+    {
+        "id": 2,
+        "title": "Endodontic Treatment ",
+        "image": "https://i.ibb.co/8X7rkkH/Woman-at-the-dentist-s-chair-during-a-dental-procedure.jpg",
+        "charge": 99,
+        "description": "You wouldn’t take a car in for repairs or have work done on your home without understanding the problem and how it would be fixed. It’s even more important to know and understand your treatment options when it comes to your teeth, something you use every day to cut and chew your food. Today there are many treatment options for repairing damaged teeth so it’s vital to weigh your options and how they will impact your future dental health and lifestyle.\n\nMake sure your dentist advises you of any proposed treatment and alternatives to it. It may be necessary for a referral to a dental specialist, such as an endodontist, to explore all of your options for the best possible care. A good dental professional will answer any questions you may have and guide you to sources for more information, such as this website, where you can learn more about dental problems and solutions.\n\nIt’s critical to receive the proper care so that you can maintain a healthy mouth, eat the foods you love, and limit the need for ongoing dental work. With the right treatment, your teeth can often last a lifetime, something we can all smile about."
+    },
+    {
+        "id": 3,
+        "title": "General Dentistry ",
+        "image": "https://i.ibb.co/jGQtJGH/general-dentistry.jpg",
+        "charge": 59,
+        "description": "General dentistry covers a range of treatment options and procedures fundamental to protecting and maintaining a good standard of oral health. Treatments are in place to keep your mouth, gums, and teeth healthy and free of pain. General dentists are often viewed in a similar way to a GP, the ultimate goal is to prevent and diagnose disease."
+    },
+    {
+        "id": 4,
+        "title": "Oral Surgery ",
+        "image": "https://i.ibb.co/mHsKZ9S/Oral-Surgery.jpg",
+        "charge": 60,
+        "description": "\nOral surgery refers to any surgical procedure performed in or around your mouth and jaw, usually by a dental specialist who’s trained to perform certain kinds of oral surgeries. There are many types of oral surgery, including surgical procedures such as a tooth removal or a root canal. Some oral surgeries involve the repositioning of the jaw. In other instances, oral surgery may involve the removal of a tumor. Oral surgeries might be performed by any one of a number of different kinds of dental specialists, including endodontists, periodontists, and prosthodontists."
+    },
+    {
+        "id": 5,
+        "title": "Orthodontic Treatment ",
+        "image": "https://i.ibb.co/7ktWCbN/Orthodontic-treatment.webp",
+        "charge": 55,
+        "description": "\nOrthodontic treatment is a way of straightening or moving teeth, to improve the appearance of the teeth and how they work. It can also help to look after the long-term health of your teeth, gums and jaw joints, by spreading the biting pressure over all your teeth. \nMany people have crowded or crooked teeth. Orthodontic treatment will straighten the teeth or move them into a better position. This can improve their appearance and the way the teeth bite together, while also making them easier to clean.\n\nSome people have upper front teeth that stick out and look unsightly. These 'prominent' teeth are more likely to be damaged, but orthodontic treatment can move them back into line. Or the way the upper and lower jaws meet can cause teeth to look unsightly and lead to an incorrect bite. Orthodontic treatment may be able to correct both of these problems.\n\nWhen the teeth don't meet correctly, this can put strain on the muscles of the jaw, causing jaw and joint problems and sometimes headaches. Orthodontic treatment can help you to bite more evenly and reduce the strain."
+    },
+    {
+        "id": 6,
+        "title": "Pediatric Dentistry ",
+        "image": "https://i.ibb.co/fD37dnV/Pediatric-dentistry.webp",
+        "charge": 79,
+        "description": "Pediatric dentistry is a branch of dentistry that deals with the examination and management of dental health in children.\n\nDental procedures are generally perceived as intimidating and painful experiences that most would like to avoid, especially among children. However, it is vital that children have their milk teeth checked regularly by pediatric dentists for evidence of caries and tooth decay."
+    },
+    {
+        "id": 7,
+        "title": "Periodontal Care ",
+        "image": "https://i.ibb.co/PtVNchC/Periodontal-careeee.webp",
+        "charge": 89,
+        "description": "The word periodontal means “around the tooth.” Periodontal disease attacks the gums and the bone that support the teeth. Plaque is a sticky film of food debris, bacteria, and saliva. If plaque is not removed, it turns into calculus (tartar). When plaque and calculus are not removed, they begin to destroy the gums and bone. Periodontal disease is characterized by red, swollen, and bleeding gums.\n\nFour out of five people have periodontal disease and don’t know it! Most people are not aware of it because the disease is usually painless in the early stages."
+    },
+    {
+        "id": 8,
+        "title": "Preventative Dentistry ",
+        "image": "https://i.ibb.co/M82NCQ3/Preventive-dentistry.webp",
+        "charge": 99,
+        "description": "Preventive dentistry is dental care that helps maintain good oral health. It’s a combination of regular dental check-ups along with developing good habits like brushing and flossing. Taking care of your teeth starts early in childhood and extends throughout the course of your life."
+    },
+    {
+        "id": 9,
+        "title": "Prosthodontics ",
+        "image": "https://i.ibb.co/r0jdT6C/Prosthodontics-images.webp",
+        "charge": 109,
+        "description": "Prosthodontics is one of the branches of dentistry that deals with the replacement of missing teeth and the associated soft and hard tissues by prostheses (crowns, bridges, dentures) which may be fixed or removable, or may be supported and retained by implants.\n\nA Prosthodontist is a specialist dentist who deals with the replacement of missing teeth and related mouth or jaw structures by bridges, dentures or prostheses. They receive an additional three years of training after dental school to specialize in this field."
+    }
+]
