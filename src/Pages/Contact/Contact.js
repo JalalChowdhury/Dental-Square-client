@@ -10,8 +10,8 @@ const Contact = () => {
         <div>
             <img src={contactImg} className="contact-img" alt="" />
             <div className="contact-headerText">
-                <h1 className="header_text">Contact Us!</h1>
-                <h6 className="header_text">Call 1-555-DENTIST to get the smile of your dreams!</h6>
+                <h1 className="contact-header">Contact Us!</h1>
+                <h6 className="header_text">Call 1-523-DENTIST to get the smile of your dreams!</h6>
 
             </div>
 
@@ -28,7 +28,7 @@ const Contact = () => {
                             </div>
                             <div className="d-flex justify-content-center align-items-center">
                                 <div>
-                                    <h3>555-DENTIST</h3>
+                                    <h3>523-DENTIST</h3>
                                     <h5>Emergency care</h5>
                                 </div>
                             </div>

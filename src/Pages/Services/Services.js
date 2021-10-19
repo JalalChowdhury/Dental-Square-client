@@ -33,7 +33,7 @@ const Services = () => {
             
             <div className='d-flex justify-content-center align-items-center'>
                 <div>
-                    <h2 className="text-center my-5">Our all <span className="salmon-color">services</span></h2>
+                    <h2 className="text-center my-5">Our best <span className="blue-color">services</span></h2>
                     <div className="row row-cols-1 row-cols-lg-3 g-4 px-5 mx-auto">
 
                         {/* <div className="d-flex flex-wrap  justify-content-center align-items-center mx-2"> */}

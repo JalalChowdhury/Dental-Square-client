@@ -3,11 +3,23 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../App";
 import "./Header.css";
+import { getAuth, signOut } from "firebase/auth";
 
 const Header = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const userName = loggedInUser?.email.split('@');
 
+
+  const handleLogout = () => {
+
+    const auth = getAuth();
+    signOut(auth).then(() => {
+      setLoggedInUser(null)
+      // Sign-out successful.
+    }).catch((error) => {
+      // An error happened.
+    });
+  }
 
   return (
     <div style={{ marginBottom: '70px' }}    >
@@ -37,7 +49,7 @@ const Header = () => {
               >
                 Home
               </Link>
-              
+
               <Link
                 to="/services"
                 className="text-decoration-none fs-5 me-3 header-text fw-bold"
@@ -73,12 +85,15 @@ const Header = () => {
 
               {
                 loggedInUser ?
-                  <button
-                    className="btn-brand-outline rounded-pill fs-25 me-3 header-text fw-bold"
-                  >
-                    {userName[0]}
-                  </button>
+                  <>
+                    <button
+                      className="btn-brand-outline rounded-pill fs-25 me-3 header-text fw-bold"
+                    >
+                      {userName[0]}
+                    </button>
 
+                    <button onClick={handleLogout} className="btn-brand-outline rounded-pill fs-35 me-3 header-text fw-bold">Log Out</button>
+                  </>
 
                   :
                   <Link
@@ -88,9 +103,6 @@ const Header = () => {
                     Login
                   </Link>
 
-              }
-              {
-                loggedInUser && <button onClick={loggedInUser}  className="btn-brand-outline rounded-pill fs-35 me-3 header-text fw-bold">Log Out</button> 
               }
 
 

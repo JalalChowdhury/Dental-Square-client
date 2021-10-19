@@ -3,6 +3,9 @@ import { Button, Container, Form } from "react-bootstrap";
 import email from "../../assets/contactForm.png";
 
 const ContactForm = () => {
+    function handleSubmitData() {
+        alert("OKEY.We will contact You");
+      }
     return (
         <section className="mt-5 pt-2">
             <div className="my-5">
@@ -41,7 +44,7 @@ const ContactForm = () => {
                             </Form.Label>
                             <Form.Control as="textarea" rows={3} />
                         </Form.Group>
-                        <Button className="btn btnColor border-0 shadow-sm">Submit</Button>
+                        <Button onClick={handleSubmitData} className="btn btnColor border-0 shadow-sm">Submit</Button>
                     </Form>
                 </div>
             </Container>

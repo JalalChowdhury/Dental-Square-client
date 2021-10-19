@@ -3,7 +3,7 @@ import './Appointment.css';
 
 const Appointment = () => {
     function handleSubmit() {
-        alert("Your Appointment word Done.We will contact You");
+        alert("Your Appointment are proccecing now.We will contact You");
       }
     return (
         <div className="w-50 mx-auto">

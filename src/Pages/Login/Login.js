@@ -7,8 +7,8 @@ import loginBanner from '../../assets/loginBanner.svg';
 import './Login.css'
 import initializeAuthentication from '../../Firebase/firebase.init';
 import {
-  getAuth, signInWithPopup, 
-  signInWithEmailAndPassword, GoogleAuthProvider, signOut 
+  getAuth, signInWithPopup,
+  signInWithEmailAndPassword, GoogleAuthProvider, signOut
 } from "firebase/auth";
 import { UserContext } from '../../App';
 
@@ -33,44 +33,39 @@ const Login = () => {
 
   }
 
-  const handleSignIn = e =>{
+  const handleSignIn = e => {
     signInWithEmailAndPassword(auth, signInInfo.email, signInInfo.password)
-    .then((userCredential) => {
-      // Signed in 
-      const user = userCredential.user;
-      setLoggedInUser({"email":user.email})
-      history.push(from)
-      // ...
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-    });
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        setLoggedInUser({ "email": user.email })
+        history.push(from)
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+      });
 
   }
 
 
-  
-  const handleGoogleSignIn = e =>{
+
+  const handleGoogleSignIn = e => {
     const googleProvider = new GoogleAuthProvider();
 
     signInWithPopup(auth, googleProvider)
-    .then((result) => {
+      .then((result) => {
 
-      const user = result.user;
-      setLoggedInUser({"email":user.email})
-      console.log(user);
-      history.push(from)
+        const user = result.user;
+        setLoggedInUser({ "email": user.email })
+        console.log(user);
+        history.push(from)
 
-    })
+      })
   }
 
-  const logout =() =>{
-    signOut(auth)
-      .then( () => {
-        setLoggedInUser({});
-      })
-}
+
 
 
   return (
@@ -87,7 +82,7 @@ const Login = () => {
                 Email
               </label>
               <input
-                  onChange={handleInput}
+                onChange={handleInput}
                 name="email"
                 type="email"
                 className="custom-input d-block w-100 px-3 py-3 rounded"
@@ -110,12 +105,12 @@ const Login = () => {
               />
             </div>
             <button
-                onClick={handleSignIn} 
+              onClick={handleSignIn}
               className="btn-brand-outline w-50 mt-2">Login</button>
 
             <button
               className="btn btn-outline-info w-50 mt-2"
-            onClick={handleGoogleSignIn}
+              onClick={handleGoogleSignIn}
             >
               <FcGoogle /> Login With Google
             </button>

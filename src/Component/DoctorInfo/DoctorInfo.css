@@ -1,10 +1,10 @@
 .doctorCard-design{
-    border: 1px solid #00bcd4;
+    
     border-radius: 7px;
     padding: 10px;
 }
 .doctorCard-design:hover{
-    border: 1px solid rgb(160, 238, 214);
+    border: 1px solid #00bcd4;
    
 }
 

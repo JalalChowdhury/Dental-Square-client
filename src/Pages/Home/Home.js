@@ -21,7 +21,9 @@ const Home = () => {
     }, [])
     const topServices = services.slice(0, 6);
 
-    // use history for routing 
+    /* --------------------------------
+         use history for routing
+    -------------------------------- */ 
     const historyServices = useHistory();
     const handleClickServices = () => {
         historyServices.push('/services');

@@ -17,11 +17,14 @@
 }
 .services-headerText{
     font-size: 80px;
-    color: white;
+    color: #00bcd4;
     text-align: center;
 }
 .services-headerText2{
     font-size: 40px;
-    color: gray;
+    color: black;
     text-align: center;
+}
+.blue-color{
+    color: #00bcd4;
 }
