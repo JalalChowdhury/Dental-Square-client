@@ -13,7 +13,7 @@ const ContactForm = () => {
                 <div className="text-center">
                     <small className="text-success fw-bold">Get in Touch</small>
                     <h1>
-                        Have Some <span className="header-text">Question?</span>
+                        Have Some <span className="header-text blue-color">Question?</span>
                     </h1>
                 </div>
             </div>
@@ -44,7 +44,7 @@ const ContactForm = () => {
                             </Form.Label>
                             <Form.Control as="textarea" rows={3} />
                         </Form.Group>
-                        <Button onClick={handleSubmitData} className="btn btnColor border-0 shadow-sm">Submit</Button>
+                        <Button onClick={handleSubmitData} className="btn-design border-0 shadow-sm">Submit</Button>
                     </Form>
                 </div>
             </Container>

@@ -9,8 +9,11 @@ import { useHistory } from 'react-router';
 import { Button } from 'react-bootstrap';
 import PateintSays from '../../Component/PateintSays/PateintSays';
 import ContactForm from '../../Component/ContactForm/ContactForm';
+
+
 const Home = () => {
 
+    // all services 
     const [services, setServices] = useState([]);
 
     useEffect(() => {
@@ -19,11 +22,13 @@ const Home = () => {
             .then(data => setServices(data))
 
     }, [])
+
+    // get fisrt 6 items in services 
     const topServices = services.slice(0, 6);
 
     /* --------------------------------
          use history for routing
-    -------------------------------- */ 
+    -------------------------------- */
     const historyServices = useHistory();
     const handleClickServices = () => {
         historyServices.push('/services');
@@ -32,6 +37,7 @@ const Home = () => {
     const handleClickAppointment = () => {
         historyAppointment.push('/appointment');
     }
+    
     return (
         <div >
 
@@ -54,7 +60,7 @@ const Home = () => {
 
             <div className='d-flex justify-content-center align-items-center'>
                 <div>
-                    <h2 className=" text-center my-5">Top <span className="salmon-color">Services</span></h2>
+                    <h2 className=" text-center my-5">Top <span className="blue-color">Services</span></h2>
                     <div className="row row-cols-1 row-cols-lg-3 g-4 px-5 mx-auto">
 
                         {/* <div className="d-flex flex-wrap  justify-content-center align-items-center mx-2"> */}

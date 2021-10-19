@@ -15,6 +15,7 @@ const Register = () => {
     // console.log(regInfo);
     const history = useHistory();
 
+    // handle validation 
     const handleInputValidation = (e) => {
       const inputId = e.target.id;
       const inputValue = e.target.value;
@@ -51,7 +52,9 @@ const Register = () => {
         }
       }
     };
-  
+    
+
+    // register process 
     const handleRegister = (e) => {
       e.preventDefault();
       if (regInfo.email && regInfo.password){

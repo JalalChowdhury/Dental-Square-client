@@ -26,7 +26,7 @@ const ServiceCartDetail = () => {
         <div className= "d-flex flex-wrap justify-content-center align-items-center mx-5">
             <img src={image} className="img-fluid" alt="" />
             <div>
-               <h3>{title}</h3>
+               <h3 className="blue-color">{title}</h3>
                <h5>$ {charge}</h5>
                <h5>Treetment Duration : {duration}</h5>
                <p>{description}</p>

@@ -8,7 +8,7 @@ const PateintSays = () => {
     return (
         <div className="container d-flex justify-content-center align-items-center">
             <div>
-                <h1 className="patient-header"><span className="salmon-color">Patient say</span> about us</h1>
+                <h1 className="patient-header"><span className="blue-color">Patient say</span> About us</h1>
                 <div className="d-flex flex-wrap  justify-content-center align-items-center py-5">
                     <div className="patient-div d-flex justify-content-center align-items-center">
                         <img src={patient1} className="patient-img" alt="" />
@@ -31,7 +31,7 @@ const PateintSays = () => {
                     <div className="patient-div d-flex justify-content-center align-items-center">
                         <img src={patient3} className="patient-img" alt="" />
                         <div>
-                            <h4>Harbia Pedri</h4>
+                            
                             <p>" So why do I feel so positive about HCHS? To begin with, I’m totally blind & have been that way since birth. This past weekend, 
                                 I was hospitalized because of infection in both legs. "</p>
                             <h4>__Harbia Pedri</h4>

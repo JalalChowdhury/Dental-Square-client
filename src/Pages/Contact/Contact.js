@@ -7,7 +7,9 @@ import ContactForm from '../../Component/ContactForm/ContactForm';
 
 const Contact = () => {
     return (
+
         <div>
+            {/* Contact banner  */}
             <img src={contactImg} className="contact-img" alt="" />
             <div className="contact-headerText">
                 <h1 className="contact-header">Contact Us!</h1>
@@ -15,6 +17,7 @@ const Contact = () => {
 
             </div>
 
+            {/* Contact Info  */}
             <div className="d-flex justify-content-center align-items-center">
                 <div className="row my-5">
                     <div className="col-md-6 d-flex justify-content-center align-items-center">
@@ -62,7 +65,7 @@ const Contact = () => {
             </div>
             <ContactForm></ContactForm>
 
-
+            {/* Contact Google map  */}
             <div id="map-design">
                 <div class="container">
                     <Iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14475.232313030407!2d91.85235586977541!3d24.90452730000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1626020059971!5m2!1sen!2sbd" width="100%" height={440} />

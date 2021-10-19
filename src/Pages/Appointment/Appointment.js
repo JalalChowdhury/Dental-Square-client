@@ -4,11 +4,11 @@ import './Appointment.css';
 const Appointment = () => {
     function handleSubmit() {
         alert("Your Appointment are proccecing now.We will contact You");
-      }
+    }
     return (
         <div className="w-50 mx-auto">
             <div>
-                <h1 className="text-center my-1">Request an Appointment</h1>
+                <h1 className="text-center my-1 my-4">Request an <span className="blue-color">Appointment</span></h1>
                 <h5 className="text-center my-3">Fill out the form below and we will contact you during our working hours.</h5>
                 <form class="row g-3">
                     <div class="col-md-6">

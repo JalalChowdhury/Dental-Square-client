@@ -20,17 +20,17 @@ const Services = () => {
     const handleClickAppointment = () => {
         historyAppointment.push('/appointment');
     }
-   
+
     return (
         <div >
             <div>
                 <img src={servicesBanner} className='servicesBanner_img' alt="" />
                 <div className="services-bannerTextDesign">
                     <h1 className="services-headerText">What We Do</h1>
-                     <h1 className="text-center services-headerText2">Enjoy Specialized Care Through Precision, Artistry, and Experience</h1>
+                    <h1 className="text-center services-headerText2">Enjoy Specialized Care Through Precision, Artistry, and Experience</h1>
                 </div>
             </div>
-            
+
             <div className='d-flex justify-content-center align-items-center'>
                 <div>
                     <h2 className="text-center my-5">Our best <span className="blue-color">services</span></h2>
@@ -52,12 +52,12 @@ const Services = () => {
                     </div>
 
                 </div>
-                
+
             </div>
             <div className="text-center">
-                <Button  onClick={handleClickAppointment} className="appointmentBtn-design mt-1">Make an Appointment</Button>
+                <Button onClick={handleClickAppointment} className="appointmentBtn-design mt-1">Make an Appointment</Button>
             </div>
-            
+
 
 
 

@@ -10,6 +10,8 @@ import {
   getAuth, signInWithPopup,
   signInWithEmailAndPassword, GoogleAuthProvider, signOut
 } from "firebase/auth";
+
+// using context 
 import { UserContext } from '../../App';
 
 
@@ -22,9 +24,13 @@ const Login = () => {
   const [signInInfo, setaSignInInfo] = useState();
   const history = useHistory();
   const location = useLocation();
+
+  // decleare after login location 
   const { from } = location.state || { from: { pathname: "/" } };
+
   const auth = getAuth();
 
+  // Signin Process 
   const handleInput = (e) => {
     e.preventDefault()
     const info = { ...signInInfo }
@@ -51,6 +57,8 @@ const Login = () => {
 
 
 
+  
+  // Google Sign in Process 
   const handleGoogleSignIn = e => {
     const googleProvider = new GoogleAuthProvider();
 
