@@ -30,7 +30,7 @@ function App() {
     return (
         <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
 
-            <div className="">
+            <div className="App">
                 <Router>
                     <Header></Header>
 
@@ -49,12 +49,12 @@ function App() {
                         <PrivateRoute path="/service/:serviceId">
                             <ServiceCartDetail></ServiceCartDetail>
                         </PrivateRoute>
-                        <Route path="/doctors">
+                        <PrivateRoute path="/doctors">
                             <Doctors></Doctors>
-                        </Route>
-                        <Route path="/appointment">
+                        </PrivateRoute>
+                        <PrivateRoute path="/appointment">
                             <Appointment></Appointment>
-                        </Route>
+                        </PrivateRoute>
                         <Route path="/about">
                             <About></About>
                         </Route>

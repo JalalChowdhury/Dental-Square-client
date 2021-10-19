@@ -3,6 +3,7 @@ import Iframe from '@trendmicro/react-iframe';
 import contactImg from '../../assets/contact-banner.jpg';
 import contactImg2 from '../../assets/contact-2.jpg';
 import './Contact.css';
+import ContactForm from '../../Component/ContactForm/ContactForm';
 
 const Contact = () => {
     return (
@@ -59,6 +60,7 @@ const Contact = () => {
                 </div>
                 
             </div>
+            <ContactForm></ContactForm>
 
 
             <div id="map-design">

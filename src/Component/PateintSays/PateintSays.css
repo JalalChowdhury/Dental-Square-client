@@ -1,0 +1,24 @@
+.patient-header{
+    text-align: center;
+    margin: 20px;
+}
+.patient-div{
+    height: 300px;
+    width: 400px;
+    border: none;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: white;
+}
+.patient-div:hover{
+    transform: scale(110%);
+}
+.patient-img{
+    min-height: 250px;
+    min-width: 150px;
+    padding: 10px;
+}
+.salmon-color{
+    color: salmon;
+}

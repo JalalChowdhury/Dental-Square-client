@@ -37,12 +37,7 @@ const Header = () => {
               >
                 Home
               </Link>
-              <Link
-                to="/about"
-                className="text-decoration-none fs-5 me-3 header-text fw-bold"
-              >
-                About
-              </Link>
+              
               <Link
                 to="/services"
                 className="text-decoration-none fs-5 me-3 header-text fw-bold"
@@ -54,7 +49,7 @@ const Header = () => {
                 to="/doctors"
                 className="text-decoration-none fs-5 me-3 header-text fw-bold"
               >
-                Doctor's
+                Dentist
               </Link>
 
               <Link
@@ -63,7 +58,12 @@ const Header = () => {
               >
                 Appointment
               </Link>
-
+              <Link
+                to="/about"
+                className="text-decoration-none fs-5 me-3 header-text fw-bold"
+              >
+                About
+              </Link>
               <Link
                 to="/contact"
                 className="text-decoration-none fs-5 me-3 header-text fw-bold"

@@ -16,9 +16,9 @@ const WhyUs = () => {
             <div className="row container mx-auto">
                 <h6 className="text-center"> #Our Features</h6>
                 <h1 className="text-center my-3">Our Clients are Our Priority, We Offer Quality Dental Services of Specialists</h1>
-                <p className="text-center">You will find a wide variety of dental services at Lotus Family Dental for children, teens, and adults alike. 
+                {/* <p className="text-center">You will find a wide variety of dental services at Lotus Family Dental for children, teens, and adults alike. 
                     For general dentistry, visit us for a checkup and teeth cleaning twice a year, 
-                    using the latest professional tools that make your visits relaxing and comfortable. </p>
+                    using the latest professional tools that make your visits relaxing and comfortable. </p> */}
                 <div className="col-md-3 d-flex justify-content-center align-items-center ">
                     <div>
                         <div className="d-flex justify-content-center align-items-center py-3">

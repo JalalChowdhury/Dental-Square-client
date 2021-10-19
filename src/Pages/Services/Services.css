@@ -1,0 +1,27 @@
+.servicesBanner_img{
+    width: 100%;
+    height: 600px;
+    filter: blur(2px) grayscale(50%);
+}
+.services-bannerTextDesign{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+    
+}
+.home-text{
+        color: white;
+        font-weight: bolder;
+}
+.services-headerText{
+    font-size: 80px;
+    color: white;
+    text-align: center;
+}
+.services-headerText2{
+    font-size: 40px;
+    color: gray;
+    text-align: center;
+}

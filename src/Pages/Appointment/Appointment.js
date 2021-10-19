@@ -2,6 +2,9 @@ import React from 'react';
 import './Appointment.css';
 
 const Appointment = () => {
+    function handleSubmit() {
+        alert("Your Appointment word Done.We will contact You");
+      }
     return (
         <div className="w-50 mx-auto">
             <div>
@@ -49,7 +52,7 @@ const Appointment = () => {
                     </div>
 
                     <div class="col-lg-3">
-                        <button type="submit" class="send-btn">Send</button>
+                        <button onClick={handleSubmit} type="submit" class="send-btn">Send</button>
                     </div>
                 </form>
             </div>
