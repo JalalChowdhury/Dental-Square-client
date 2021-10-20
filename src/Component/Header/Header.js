@@ -7,7 +7,6 @@ import { getAuth, signOut } from "firebase/auth";
 
 const Header = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-  const userName = loggedInUser?.email.split('@');
 
 
   const handleLogout = () => {
@@ -91,7 +90,7 @@ const Header = () => {
                     <button
                       className="btn-brand-outline rounded-pill fs-25 me-3 header-text fw-bold"
                     >
-                      {userName[0]}
+                      {loggedInUser.user.displayName}
                     </button>
 
                     <button onClick={handleLogout} className="btn-brand-outline rounded-pill fs-35 me-3 header-text fw-bold">Log Out</button>

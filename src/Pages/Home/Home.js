@@ -47,7 +47,8 @@ const Home = () => {
                 <img src={homeBanner} className="img-fluid homeBanner" alt="" />
                 <div className="header-bodyDesign">
                     <h6>Your Best Dental Experience Here</h6>
-                    <h1 id="home-header1">Best Care For Your Good Health</h1>
+                    <h1 id="home-header1">Best Care For Your </h1>
+                    <h1 id="home-header1">Good Health</h1>
                     <p id="home-header2" className="home-text my-3">The ourselves suffering the sincerity. Inhabit her manners adapted age certain.</p>
 
                     <Button onClick={handleClickServices} className="servicBtn-design me-3 ">View Services</Button>

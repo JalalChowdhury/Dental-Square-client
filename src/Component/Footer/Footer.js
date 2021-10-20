@@ -14,9 +14,9 @@ const Footer = () => {
                         <h2 className="mt-4 mr-5 text-center">Dental Health Tips & Special Offers</h2>
                         <h3 className="mt-1 mr-5 text-center">Subscribe to Our Newsletter</h3>
                         <p className="text-center mr-2"><small>No spam message from us, only give you latest offer which is best for you and your business</small></p>
-                        <div class="input-group mb-3">
+                        <div className="input-group mb-3">
                             <div className="input-group-prepend">
-                                <span class="input-group-text p-3" id="basic-addon1">@</span>
+                                <span className="input-group-text p-3" id="basic-addon1">@</span>
                             </div>
                             <input type="text" className="form-control me-1" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1"/>
                             <button className="add-btn">Subscribe</button>
@@ -26,9 +26,9 @@ const Footer = () => {
                 <div className="row mt-4 mb-4 d-flex justify-content-around">
                     <div className="col-md-2 ml-1">
                         <h3 className=""> Contact US</h3>
-                        <p> <small> <i class="fas fa-map-marker"></i> 134/4 NY, Sylhet, Bangladesh </small> </p>
-                        <p> <small> <i class="fas fa-envelope-square"></i> dental.square@gmail.com </small> </p>
-                        <p> <small>  <i class="fas fa-phone-square-alt"></i> (+88) 01646- 705394 </small> </p>
+                        <p> <small> <i className="fas fa-map-marker"></i> 134/4 NY, Sylhet, Bangladesh </small> </p>
+                        <p> <small> <i className="fas fa-envelope-square"></i> dental.square@gmail.com </small> </p>
+                        <p> <small>  <i className="fas fa-phone-square-alt"></i> (+88) 01646- 705394 </small> </p>
 
                     </div>
 

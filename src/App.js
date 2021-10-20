@@ -26,9 +26,9 @@ export const UserContext = createContext();
 
 function App() {
     const localUser = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null;
-    const [loggedInUser, setLoggedInUser] = useState(localUser? {"email":localUser.email} : null);
+    const [loggedInUser, setLoggedInUser] = useState(localUser? {"user":localUser} : null);
 
-    
+
     return (
         <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
 

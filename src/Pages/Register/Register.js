@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import { Link,useHistory } from 'react-router-dom';
-import {emailRegex, passRegex} from '../Register/Regex'
+import {emailRegex, passRegex, usernameRegex} from '../Register/Regex'
 import loginBanner from '../../assets/loginBanner.svg'
-import {getAuth ,createUserWithEmailAndPassword } from 'firebase/auth';
+import {getAuth ,createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import initializeAuthentication from '../../Firebase/firebase.init';
+import { Alert } from 'react-bootstrap';
 
 initializeAuthentication();
 
@@ -13,7 +14,7 @@ const Register = () => {
     const [inputError, setInputError] = useState({});
     const [regInfo, setRegInfo] = useState({});
     const [error, setError] = useState('');
-
+    const [showAlert, setShowAlert] = useState(false)
 
     // console.log(regInfo);
     const history = useHistory();
@@ -28,10 +29,12 @@ const Register = () => {
          
           setError("Please Type a Valid Email !");
           info[inputId] = null;
+          setShowAlert(true)
           setRegInfo(info);
         } else {
           
           setError('');
+          setShowAlert(false)
           info[inputId] = inputValue;
           setRegInfo(info);
         }
@@ -41,26 +44,48 @@ const Register = () => {
           
           setError('Must be more than 8 chars combine with uppercase and lowercase, and at least one number');
           info[inputId] = null;
+          setShowAlert(true)
           setRegInfo(info);
         } else {
          
           setError('');
           info[inputId] = inputValue;
+          setShowAlert(false)
           setRegInfo(info);
         }
       }
+
+      if (inputId === "username") {
+        if (!usernameRegex.test(inputValue)) {
+          
+          setError('Alphanumeric string that may include _ and – having a length of 5 to 10 characters.');
+          info[inputId] = null;
+          setShowAlert(true)
+          setRegInfo(info);
+        } else {
+         
+          setError('');
+          info[inputId] = inputValue;
+          setShowAlert(false)
+          setRegInfo(info);
+        }
+      }
+      
     };
     
 
     // register process 
     const handleRegister = (e) => {
       e.preventDefault();
-      if (regInfo.email && regInfo.password){
+      if (regInfo.email && regInfo.password && regInfo.username){
       const auth = getAuth();
       createUserWithEmailAndPassword(auth, regInfo.email, regInfo.password)
         .then((userCredential) => {
           // Signed in 
           const user = userCredential.user;
+          updateProfile(auth.currentUser, {
+            displayName: regInfo.username
+          })
           history.push('/login');
           setError('');
 
@@ -73,12 +98,30 @@ const Register = () => {
 
     return (
         <section style={{marginTop:"130px"}}>
+
         <div
           className="container py-5 d-flex justify-content-center align-items-center"
         >
           <div className="row">
             <div className="col-md-7 shadow-sm rounded-3 border p-4 d-flex flex-column justify-center align-items-center">
               <h3 className='text-brand'>Create Your Account</h3>
+
+              {
+                showAlert && <Alert key={1} variant="danger" > {error} </Alert>
+              }
+
+              <div className="p-2 w-75">
+                <label htmlFor="username">Username</label>
+                <input
+                  type="text"
+                  onChange={handleInputValidation}
+                  className="custom-input d-block w-100 px-3 py-2 rounded"
+                  id="username"
+                  placeholder="john"
+                />
+              </div>
+
+
               <div className="p-2 w-75">
                 <label htmlFor="email">Email</label>
                 <input
@@ -131,7 +174,7 @@ const Register = () => {
                   </div>
                 </div>
               </div>
-              <div className="row mb-3 text-danger">{error}</div>
+              {/* <div className="row mb-3 text-danger">{error}</div> */}
               <p className="p-2">
                 By registering, you agree to our{" "}
                 <span>

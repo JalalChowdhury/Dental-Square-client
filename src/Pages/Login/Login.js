@@ -13,6 +13,7 @@ import {
 
 // using context 
 import { UserContext } from '../../App';
+import { Alert } from 'react-bootstrap';
 
 
 
@@ -25,6 +26,7 @@ const Login = () => {
   const [error, setError] = useState('');
   const history = useHistory();
   const location = useLocation();
+  const [showAlert, setShowAlert] = useState(false)
 
   // decleare after login location 
   const { from } = location.state || { from: { pathname: "/" } };
@@ -41,21 +43,26 @@ const Login = () => {
   }
 
   const handleSignIn = e => {
+    if(signInInfo && signInInfo.email && signInInfo.password ){
     signInWithEmailAndPassword(auth, signInInfo.email, signInInfo.password)
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
         localStorage.setItem('user', JSON.stringify(user))
         const localUser = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null;
-        setLoggedInUser({ "email": localUser?.email });
+        setLoggedInUser({ "user": localUser });
         history.push(from);
+
+        setShowAlert(false)
         setError('');
         // ...
       })
       .catch((error) => {
+        setShowAlert(true)
+
         setError(error.message);
       });
-
+    }
   }
 
 
@@ -69,10 +76,10 @@ const Login = () => {
       .then((result) => {
 
         const user = result.user;
-        // console.log(user);
+        console.log(user);  
         localStorage.setItem('user', JSON.stringify(user))
         const localUser = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null;
-        setLoggedInUser(localUser? { "email": localUser.email }:null);
+        setLoggedInUser(localUser? { "user": localUser }:null);
 
         history.push(from)
         setError('');
@@ -94,6 +101,11 @@ const Login = () => {
         <div className="row">
           <div className="col-md-7 shadow-sm rounded-3 border p-4 d-flex flex-column justify-center align-items-center">
             <h3 className='text-brand'>Enter Your Credential</h3>
+
+            {
+                showAlert && <Alert key={1} variant="danger" > {error} </Alert>
+              }
+
             <div className="w-75 py-2">
               <HiOutlineMail className="fs-4 my-2 text-brand" />
               <label htmlFor="email" className="px-1">
@@ -122,7 +134,7 @@ const Login = () => {
 
               />
             </div>
-            <div className="row mb-3 text-danger">{error}</div>
+            {/* <div className="row mb-3 text-danger">{error}</div> */}
             <button
               onClick={handleSignIn}
               className="btn-brand-outline w-50 mt-2">Login</button>
