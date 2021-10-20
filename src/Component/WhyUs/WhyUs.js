@@ -14,8 +14,8 @@ const WhyUs = () => {
 
 
             <div className="row container mx-auto">
-                <h6 className="text-center"> #Our Features</h6>
-                <h1 className="text-center my-3">Our Clients are Our Priority, We Offer Quality Dental Services of Specialists</h1>
+                <h6 className="text-center blue-color"> #Our Features</h6>
+                <h1 className="text-center my-3">Our Clients are Our Priority, We Offer Quality <span className="blue-color">Dental Services</span> of <span className="blue-color">Specialists</span></h1>
                 {/* <p className="text-center">You will find a wide variety of dental services at Lotus Family Dental for children, teens, and adults alike. 
                     For general dentistry, visit us for a checkup and teeth cleaning twice a year, 
                     using the latest professional tools that make your visits relaxing and comfortable. </p> */}

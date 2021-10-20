@@ -8,7 +8,7 @@ import './Login.css'
 import initializeAuthentication from '../../Firebase/firebase.init';
 import {
   getAuth, signInWithPopup,
-  signInWithEmailAndPassword, GoogleAuthProvider, signOut
+  signInWithEmailAndPassword, GoogleAuthProvider
 } from "firebase/auth";
 
 // using context 
@@ -22,6 +22,7 @@ const Login = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
   const [signInInfo, setaSignInInfo] = useState();
+  const [error, setError] = useState('');
   const history = useHistory();
   const location = useLocation();
 
@@ -44,20 +45,22 @@ const Login = () => {
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
-        setLoggedInUser({ "email": user.email })
-        history.push(from)
+        localStorage.setItem('user', JSON.stringify(user))
+        const localUser = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null;
+        setLoggedInUser({ "email": localUser?.email });
+        history.push(from);
+        setError('');
         // ...
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
+        setError(error.message);
       });
 
   }
 
 
 
-  
+
   // Google Sign in Process 
   const handleGoogleSignIn = e => {
     const googleProvider = new GoogleAuthProvider();
@@ -66,11 +69,18 @@ const Login = () => {
       .then((result) => {
 
         const user = result.user;
-        setLoggedInUser({ "email": user.email })
-        console.log(user);
+        // console.log(user);
+        localStorage.setItem('user', JSON.stringify(user))
+        const localUser = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null;
+        setLoggedInUser(localUser? { "email": localUser.email }:null);
+
         history.push(from)
+        setError('');
 
       })
+      .catch((error) => {
+        setError(error.message);
+      });
   }
 
 
@@ -112,6 +122,7 @@ const Login = () => {
 
               />
             </div>
+            <div className="row mb-3 text-danger">{error}</div>
             <button
               onClick={handleSignIn}
               className="btn-brand-outline w-50 mt-2">Login</button>

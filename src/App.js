@@ -25,8 +25,10 @@ import Footer from "./Component/Footer/Footer";
 export const UserContext = createContext();
 
 function App() {
-    const [loggedInUser, setLoggedInUser] = useState();
+    const localUser = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null;
+    const [loggedInUser, setLoggedInUser] = useState(localUser? {"email":localUser.email} : null);
 
+    
     return (
         <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
 

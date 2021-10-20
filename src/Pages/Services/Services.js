@@ -22,7 +22,7 @@ const Services = () => {
     }
 
     return (
-        <div >
+        <div className="services">
             <div>
                 <img src={servicesBanner} className='servicesBanner_img' alt="" />
                 <div className="services-bannerTextDesign">

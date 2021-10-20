@@ -1,6 +1,9 @@
+.contact{
+        overflow: hidden;
+}
 .contact-header{
     font-size: 60px;
-    color: salmon;
+    
 }
 .contact-img{
     width: 100%;
@@ -15,8 +18,8 @@
      
 .contact-headerText{
         position: absolute;
-        top: 40%;
-        left: 50%;
+        top: 35%;
+        left: 30%;
         transform: translate(-50%, -50%);
     
     
@@ -39,4 +42,41 @@
 .icons-design{
         font-size: 70px;
         padding: 8px;
+}
+.navy-color{
+        color: navy;
+}
+.blue-color{
+        color: #00bcd4;
+}
+
+@media only screen and (max-width: 688px) {
+        
+            .contact-header{
+                font-size: 50px;
+                
+            }
+            .contact-img{
+              
+                height: 300px;
+              
+            }
+            
+            .card_container{
+                position: relative;
+                text-align: center;
+            }
+                 
+            .contact-headerText{
+                    position: absolute;
+                    top: 30%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                
+                
+            } 
+            #map-design {
+                    height: 250px;
+            }
+        
 }

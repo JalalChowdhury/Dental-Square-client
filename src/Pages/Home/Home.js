@@ -9,6 +9,7 @@ import { useHistory } from 'react-router';
 import { Button } from 'react-bootstrap';
 import PateintSays from '../../Component/PateintSays/PateintSays';
 import ContactForm from '../../Component/ContactForm/ContactForm';
+import WhyUs from './../../Component/WhyUs/WhyUs';
 
 
 const Home = () => {
@@ -39,7 +40,7 @@ const Home = () => {
     }
     
     return (
-        <div >
+        <div className="home" >
 
 
             <div>
@@ -47,7 +48,7 @@ const Home = () => {
                 <div className="header-bodyDesign">
                     <h6>Your Best Dental Experience Here</h6>
                     <h1 id="home-header1">Best Care For Your Good Health</h1>
-                    <p id="home-header2" className="home-text my-3">The ourselves suffering the sincerity. Inhabit her manners adapted age certain. Debating offended at branched striking be subjects.</p>
+                    <p id="home-header2" className="home-text my-3">The ourselves suffering the sincerity. Inhabit her manners adapted age certain.</p>
 
                     <Button onClick={handleClickServices} className="servicBtn-design me-3 ">View Services</Button>
 
@@ -80,9 +81,13 @@ const Home = () => {
 
                 </div>
             </div>
+            <div className="whyUs">
+                <WhyUs></WhyUs>
+            </div>
             <div>
                 <PateintSays></PateintSays>
             </div>
+            
             <div>
                 <ContactForm></ContactForm>
             </div>

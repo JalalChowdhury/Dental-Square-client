@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { Link,useHistory } from 'react-router-dom';
 import {emailRegex, passRegex} from '../Register/Regex'
 import loginBanner from '../../assets/loginBanner.svg'
-import {getAuth , signInWithPopup, GoogleAuthProvider,createUserWithEmailAndPassword } from 'firebase/auth';
+import {getAuth ,createUserWithEmailAndPassword } from 'firebase/auth';
 import initializeAuthentication from '../../Firebase/firebase.init';
 
 initializeAuthentication();
@@ -12,6 +12,9 @@ const Register = () => {
 
     const [inputError, setInputError] = useState({});
     const [regInfo, setRegInfo] = useState({});
+    const [error, setError] = useState('');
+
+
     // console.log(regInfo);
     const history = useHistory();
 
@@ -22,31 +25,26 @@ const Register = () => {
       const info = { ...regInfo };
       if (inputId === "email") {
         if (!emailRegex.test(inputValue)) {
-          setInputError({
-            ...inputError,
-            name: inputId,
-            errorMessage: "Please Type a Valid Email !",
-          });
+         
+          setError("Please Type a Valid Email !");
           info[inputId] = null;
           setRegInfo(info);
         } else {
-          setInputError(null);
+          
+          setError('');
           info[inputId] = inputValue;
           setRegInfo(info);
         }
       }
       if (inputId === "password") {
         if (!passRegex.test(inputValue)) {
-          setInputError({
-            ...inputError,
-            name: inputId,
-            errorMessage:
-              "Must be more than 8 chars combine with uppercase and lowercase, and at least one number",
-          });
+          
+          setError('Must be more than 8 chars combine with uppercase and lowercase, and at least one number');
           info[inputId] = null;
           setRegInfo(info);
         } else {
-          setInputError(null);
+         
+          setError('');
           info[inputId] = inputValue;
           setRegInfo(info);
         }
@@ -63,14 +61,12 @@ const Register = () => {
         .then((userCredential) => {
           // Signed in 
           const user = userCredential.user;
-          history.push('/login')
+          history.push('/login');
+          setError('');
 
         })
         .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          // console.log(errorMessage);
-          // ..
+           setError(error.message);
         });
       }
     };
@@ -135,6 +131,7 @@ const Register = () => {
                   </div>
                 </div>
               </div>
+              <div className="row mb-3 text-danger">{error}</div>
               <p className="p-2">
                 By registering, you agree to our{" "}
                 <span>

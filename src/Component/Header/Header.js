@@ -14,7 +14,9 @@ const Header = () => {
 
     const auth = getAuth();
     signOut(auth).then(() => {
-      setLoggedInUser(null)
+      setLoggedInUser(null);
+      localStorage.setItem('user', null);
+
       // Sign-out successful.
     }).catch((error) => {
       // An error happened.
@@ -22,7 +24,7 @@ const Header = () => {
   }
 
   return (
-    <div style={{ marginBottom: '70px' }}    >
+    <div style={{ marginBottom: '60px' }}    >
 
       <Navbar
         collapseOnSelect

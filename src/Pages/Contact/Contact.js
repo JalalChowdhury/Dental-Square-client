@@ -8,11 +8,11 @@ import ContactForm from '../../Component/ContactForm/ContactForm';
 const Contact = () => {
     return (
 
-        <div>
+        <div className="contact">
             {/* Contact banner  */}
             <img src={contactImg} className="contact-img" alt="" />
             <div className="contact-headerText">
-                <h1 className="contact-header">Contact Us!</h1>
+                <h1 className="contact-header navy-color">Contact Us!</h1>
                 <h6 className="header_text">Call 1-523-DENTIST to get the smile of your dreams!</h6>
 
             </div>
@@ -26,34 +26,34 @@ const Contact = () => {
                     </div>
                     <div className="col-md-6">
                         <div className="d-flex align-items-center">
-                            <div className="icons-design">
-                            <i class="fas fa-plus-square"></i>
+                            <div className="icons-design navy-color">
+                                <i class="fas fa-plus-square"></i>
                             </div>
                             <div className="d-flex justify-content-center align-items-center">
                                 <div>
-                                    <h3>523-DENTIST</h3>
+                                    <h3>523- <span className="blue-color">DENTIST</span></h3>
                                     <h5>Emergency care</h5>
                                 </div>
                             </div>
                         </div>
                         <div className="d-flex  align-items-center">
-                            <div className="icons-design">
-                            <i class="fas fa-phone-square-alt"></i>
+                            <div className="icons-design navy-color">
+                                <i class="fas fa-phone-square-alt"></i>
                             </div>
                             <div className="d-flex justify-content-center align-items-center">
                                 <div>
-                                    <h3>CALL US TODAY</h3>
-                                    <h5>555-DENTIST</h5>
+                                    <h3><span className="blue-color">CALL US</span> TODAY</h3>
+                                    <h5> +8801646-705394</h5>
                                 </div>
                             </div>
                         </div>
                         <div className="d-flex  align-items-center">
-                            <div className="icons-design">
-                            <i class="fas fa-envelope-square"></i>
+                            <div className="icons-design navy-color">
+                                <i class="fas fa-envelope-square"></i>
                             </div>
                             <div className="d-flex justify-content-center align-items-center">
                                 <div>
-                                    <h3>SEND US AN EMAIL</h3>
+                                    <h3>SEND US AN <span className="blue-color">E-MAIL</span> </h3>
                                     <h5>Dental.square@example.com</h5>
                                 </div>
                             </div>
@@ -61,7 +61,7 @@ const Contact = () => {
 
                     </div>
                 </div>
-                
+
             </div>
             <ContactForm></ContactForm>
 

@@ -5,7 +5,7 @@ const FaqAbout = () => {
         <section className="py-5 container" id="about">
 
             <div className="top-text">
-                <h1>Why we are the best? FAQ’s</h1>
+                <h1>Why we are the best? <span className="blue-color">FAQ’s</span></h1>
                 <h6>The journey of a thousand (S)miles begins with one step!</h6>
             </div>
             {/*  added row part for Question and answer--> */}

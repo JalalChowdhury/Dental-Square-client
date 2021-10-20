@@ -25,12 +25,12 @@
 
 .btn-brand-outline {
     padding: 10px 25px;
-    color: #8B2323;
-    border: 1px solid #8B2323;
+    color:navy;
+    border: 1px solid navy;
     transition: all 0.5s ease;
 }
 
 .btn-brand-outline:hover {
     color: white;
-    background-color: #8B2323;
+    background-color: navy;
 }
