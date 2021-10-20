@@ -2,12 +2,13 @@
         overflow: hidden;
 }
 #home-header1{
-    font-size: 70px;
+    font-size: 60px;
     color:navy;
 }
 #home-header2{
     
     color:#00bcd4;
+    font-size: 24px;
 }
 .homeBanner{
     width: 100%;

@@ -46,8 +46,11 @@ const Login = () => {
     if(signInInfo && signInInfo.email && signInInfo.password ){
     signInWithEmailAndPassword(auth, signInInfo.email, signInInfo.password)
       .then((userCredential) => {
+
         // Signed in 
         const user = userCredential.user;
+
+        //using local storage for not log out with refreshing 
         localStorage.setItem('user', JSON.stringify(user))
         const localUser = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null;
         setLoggedInUser({ "user": localUser });

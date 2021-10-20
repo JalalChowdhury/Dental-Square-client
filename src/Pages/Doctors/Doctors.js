@@ -16,8 +16,8 @@ const Doctors = () => {
             {/* Dentist Info  */}
             <div className='d-flex justify-content-center align-items-center'>
                 <div>
-                    <h6  className="text-center blue-color my-5">MEET THE TEAM</h6>
-                    <h2 className="mt-2 mb-5 text-center">Honorable<span className="blue-color"> Dentists</span></h2>
+                    <h6  className="text-center blue-color my-5">Meet The Dentist</h6>
+                    <h2 className="mt-2 mb-5 text-center">Specialist<span className="blue-color"> Dentists</span></h2>
                     <div className="row row-cols-1 row-cols-md-3 g-4 px-5 mx-auto">
                         {
                             // console.log(courses);

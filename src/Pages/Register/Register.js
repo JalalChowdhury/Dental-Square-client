@@ -13,7 +13,7 @@ const Register = () => {
 
     const [inputError, setInputError] = useState({});
     const [regInfo, setRegInfo] = useState({});
-    const [error, setError] = useState('');
+    // const [error, setError] = useState('');
     const [showAlert, setShowAlert] = useState(false)
 
     // console.log(regInfo);
@@ -27,13 +27,13 @@ const Register = () => {
       if (inputId === "email") {
         if (!emailRegex.test(inputValue)) {
          
-          setError("Please Type a Valid Email !");
+          setInputError("Please Type a Valid Email !");
           info[inputId] = null;
           setShowAlert(true)
           setRegInfo(info);
         } else {
           
-          setError('');
+          setInputError('');
           setShowAlert(false)
           info[inputId] = inputValue;
           setRegInfo(info);
@@ -42,13 +42,13 @@ const Register = () => {
       if (inputId === "password") {
         if (!passRegex.test(inputValue)) {
           
-          setError('Must be more than 8 chars combine with uppercase and lowercase, and at least one number');
+          setInputError('Password must be more than 8 chars combine with uppercase and lowercase, and at least one number');
           info[inputId] = null;
           setShowAlert(true)
           setRegInfo(info);
         } else {
          
-          setError('');
+          setInputError('');
           info[inputId] = inputValue;
           setShowAlert(false)
           setRegInfo(info);
@@ -58,13 +58,13 @@ const Register = () => {
       if (inputId === "username") {
         if (!usernameRegex.test(inputValue)) {
           
-          setError('Alphanumeric string that may include _ and – having a length of 5 to 10 characters.');
+          setInputError('Alphanumeric string that may include _ and – having a length of 5 to 10 characters.');
           info[inputId] = null;
           setShowAlert(true)
           setRegInfo(info);
         } else {
          
-          setError('');
+          setInputError('');
           info[inputId] = inputValue;
           setShowAlert(false)
           setRegInfo(info);
@@ -77,6 +77,7 @@ const Register = () => {
     // register process 
     const handleRegister = (e) => {
       e.preventDefault();
+
       if (regInfo.email && regInfo.password && regInfo.username){
       const auth = getAuth();
       createUserWithEmailAndPassword(auth, regInfo.email, regInfo.password)
@@ -87,13 +88,15 @@ const Register = () => {
             displayName: regInfo.username
           })
           history.push('/login');
-          setError('');
+          setInputError('');
 
         })
         .catch((error) => {
-           setError(error.message);
+           setInputError(error.message);
         });
       }
+
+    
     };
 
     return (
@@ -107,7 +110,7 @@ const Register = () => {
               <h3 className='text-brand'>Create Your Account</h3>
 
               {
-                showAlert && <Alert key={1} variant="danger" > {error} </Alert>
+                showAlert && <Alert key={1} variant="danger" > {inputError} </Alert>
               }
 
               <div className="p-2 w-75">
@@ -118,6 +121,7 @@ const Register = () => {
                   className="custom-input d-block w-100 px-3 py-2 rounded"
                   id="username"
                   placeholder="john"
+                  required
                 />
               </div>
 
@@ -130,12 +134,9 @@ const Register = () => {
                   className="custom-input d-block w-100 px-3 py-2 rounded"
                   id="email"
                   placeholder="Name@example.com"
+                  required
                 />
-                {inputError?.name === "email" && (
-                  <p className="text-danger text-center">
-                    {inputError?.errorMessage}
-                  </p>
-                )}
+
               </div>
               <div className="p-2 w-75">
                 <label htmlFor="password">Password</label>
@@ -145,12 +146,9 @@ const Register = () => {
                   className="custom-input d-block w-100 px-3 py-2 rounded"
                   id="password"
                   placeholder="Enter Your Secret Code"
+                  required
                 />
-                {inputError?.name === "password" && (
-                  <p className="text-danger text-center">
-                    {inputError?.errorMessage}
-                  </p>
-                )}
+
               </div>
               <div className="p-2 w-75">
                 <div className="row">
@@ -161,6 +159,7 @@ const Register = () => {
                       className="custom-input d-block w-100 px-3 py-2 rounded"
                       id="firstName"
                       placeholder="John"
+                      required
                     />
                   </div>
                   <div className="col-md-6">
@@ -170,6 +169,7 @@ const Register = () => {
                       className="custom-input d-block w-100 px-3 py-2 rounded"
                       id="lastName"
                       placeholder="Doe"
+                      required 
                     />
                   </div>
                 </div>
